@@ -2,6 +2,11 @@ language: generic
 before_install:
   - sudo sh -c "echo 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise-3.5 main' >> /etc/apt/sources.list"
   - sudo apt-get update -qq
+  
+  - sudo sh -c "wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > /usr/bin/lein"
+  - sudo chmod u+x /usr/bin/lein
+
+  - sudo apt-get install ghc
 script:
   - cd java/brainfrack; mvn package -q
   - cd ../..
