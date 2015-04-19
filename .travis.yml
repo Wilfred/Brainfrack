@@ -19,5 +19,3 @@ script:
 
   - cd c; make
   - cd ..
-notifications:
-  email: false
