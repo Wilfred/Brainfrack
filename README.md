@@ -63,15 +63,6 @@ The C implementation reads programs from standard in.
     $ make
     $ cat ../sample_programs/hello_world.bf | ./brainfrack
 
-## LLVM
-
-The LLVM implementation is a C++ program that compiles BF to LLVM
-IR. It has been written on a 32-bit x86 machine and may not work
-elsewhere.
-
-    $ cd llvm
-    $ make
-
 ## Test programs
 
 http://www.hevanet.com/cristofd/brainfuck/tests.b is a treasure trove
