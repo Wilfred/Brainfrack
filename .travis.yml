@@ -4,7 +4,7 @@ before_install:
   - sudo apt-get update -qq
   
   - sudo sh -c "wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > /usr/bin/lein"
-  - sudo chmod u+x /usr/bin/lein
+  - sudo chmod a+x /usr/bin/lein
 
   - sudo apt-get install ghc
 script:
