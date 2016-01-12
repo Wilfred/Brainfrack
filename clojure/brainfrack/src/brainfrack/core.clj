@@ -1,5 +1,6 @@
 (ns brainfrack.core
   (:use [clojure.set :only (map-invert)])
+  (:use [clojure.string :only (join)])
   (:gen-class))
 
 (defn matching-brackets?
@@ -132,7 +133,7 @@
 (defn -read-all-stdin
   "Read all the text from stdin and return as a string."
   []
-  (apply str (line-seq (java.io.BufferedReader. *in*))))
+  (join (line-seq (java.io.BufferedReader. *in*))))
 
 (defn -main
   "Read a BF program from stdin and evaluate it."
