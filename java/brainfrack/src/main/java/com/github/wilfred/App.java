@@ -3,13 +3,14 @@ package com.github.wilfred;
 import java.util.Stack;
 
 public class App {
+    static String readStdIn() {
+        java.util.Scanner s = new java.util.Scanner(System.in).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
+
     public static void main(String[] args) {
-        if (args.length == 2 && args[0].equals("-i")) {
-            Interpreter interpreter = new Interpreter();
-            interpreter.evaluate(args[1]);
-        } else {
-            System.out.println("Usage: java Brainfrack -i <program>");
-        }
+        Interpreter interpreter = new Interpreter();
+        interpreter.evaluate(readStdIn());
     }
 }
 

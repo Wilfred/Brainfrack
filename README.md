@@ -34,9 +34,9 @@ Apache Maven required.
 
 ### Usage
 
-Brainfrack takes programs as command line arguments with an `-i` flag:
+The Java implementation reads programs from standard in.
 
-    $ java -cp target/brainfrack-0.1.jar com.github.wilfred.App -i "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+    $ cat ../../sample_programs/hello_world.bf | java -cp target/brainfrack-0.1.jar com.github.wilfred.App
     Hello world!
 
 ## Haskell
