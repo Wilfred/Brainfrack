@@ -8,7 +8,9 @@ c/brainfrack
 
 llvm/compiler
 llvm/run_tests
+
 .gdb_history
+.lein-repl-history
 
 *.o
 a.out
