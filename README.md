@@ -2,12 +2,17 @@
 
 [![Build Status](https://travis-ci.org/Wilfred/Brainfrack.svg?branch=master)](https://travis-ci.org/Wilfred/Brainfrack)
 
-This repo contains various
-[BF](http://en.wikipedia.org/wiki/Brainfuck) implementations, both
-interpreters and a compiler. I use BF as a coding exercise to explore
-unfamiliar programming languages or tools.
+A collection of [BF](http://en.wikipedia.org/wiki/Brainfuck)
+interpreters in different languages. GPLv2 or later license.
 
-GPLv2 or later license.
+Implementing BF is a great way of exploring unfamiliar programming
+languages. There's non-trivial logic, some I/O, and multiple
+data types. BF is still small enough that you can build a complete
+implementation in an evening or two.
+
+For a robust, high performance BF implementation with good user
+feedback, see my
+['industrial-grade' BF compiler](https://github.com/wilfred/bfc).
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
