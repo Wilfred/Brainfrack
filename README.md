@@ -9,7 +9,7 @@ unfamiliar programming languages or tools.
 
 GPLv2 or later license.
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc/generate-toc again -->
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
 - [Brainfrack](#brainfrack)
@@ -19,7 +19,7 @@ GPLv2 or later license.
     - [Haskell](#haskell)
     - [Clojure](#clojure)
     - [C](#c)
-    - [LLVM](#llvm)
+    - [Test programs](#test-programs)
 
 <!-- markdown-toc end -->
 
