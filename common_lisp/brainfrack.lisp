@@ -13,6 +13,10 @@
                 (incf program-index))
            (#\- (decf (elt *bf-memory* memory-index))
                 (incf program-index))
+           (#\> (incf memory-index)
+                (incf program-index))
+           (#\< (decf memory-index)
+                (incf program-index))
            ;; Skip over comments.
            (t (incf program-index))))))
 
