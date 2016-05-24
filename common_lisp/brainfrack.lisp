@@ -32,3 +32,10 @@ Example:
        for index from 0
        collect (+ 1 index))))
 
+(defun main (args)
+  (unless (= (length args) 1)
+    (format t "Usage: /path/to/whatever.bf~&")
+    (return-from main nil))
+  (format t "Args: ~A~&" args))
+
+(main (uiop:command-line-arguments))
