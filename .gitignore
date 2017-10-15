@@ -6,6 +6,8 @@ haskell/Brainfrack
 
 c/brainfrack
 
+racket/#*
+
 llvm/compiler
 llvm/run_tests
 
