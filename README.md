@@ -68,6 +68,11 @@ The C implementation reads programs from standard in.
     $ make
     $ cat ../sample_programs/hello_world.bf | ./brainfrack
 
+## Racket
+
+    $ cd racket
+    $ cat ../sample_programs/hello_world.bf | racket brainfrack.rkt
+
 ## Test programs
 
 http://www.hevanet.com/cristofd/brainfuck/tests.b is a treasure trove
