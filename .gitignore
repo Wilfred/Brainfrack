@@ -12,6 +12,9 @@ racket/#*
 llvm/compiler
 llvm/run_tests
 
+ocaml/_build
+ocaml/*.native
+
 .gdb_history
 .lein-repl-history
 
