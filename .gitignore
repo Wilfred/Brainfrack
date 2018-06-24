@@ -1,5 +1,6 @@
 java/*.class
 java/brainfrack/target
+java/.idea
 
 haskell/*.hi
 haskell/Brainfrack
