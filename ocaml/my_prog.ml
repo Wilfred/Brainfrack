@@ -29,22 +29,43 @@ let matching_open prog close_idx =
   worker (close_idx - 1) 0;;
 
 let eval_bf prog =
-  (* TODO: use a bigger cell array.*)
-  let cells = (Array.make 1000 0) in
+  let cells = (Array.make 30000 0) in
   let rec loop cell_idx instr_idx =
-    if instr_idx > String.length prog then
+    if instr_idx >= String.length prog then
+      (* Reached the end of the program, we're done! *)
       ()
     else
       let instr = (String.get prog instr_idx) in
       match instr with
         '+' ->
          let cell_val = Array.get cells cell_idx in
-         Array.set cells cell_idx (cell_val + 1)
+         Array.set cells cell_idx (cell_val + 1);
+         loop cell_idx (instr_idx + 1)
       | '-' ->
          let cell_val = Array.get cells cell_idx in
-         Array.set cells cell_idx (cell_val - 1)
-      | _ -> loop cell_idx (instr_idx + 1)
+         Array.set cells cell_idx (cell_val - 1);
+         loop cell_idx (instr_idx + 1)
+      | '>' ->
+         loop (cell_idx + 1) (instr_idx + 1)
+      | '<' ->
+         loop (cell_idx - 1) (instr_idx + 1)
+      | '.' ->
+         let cell_val = Array.get cells cell_idx in
+         print_char (Char.chr cell_val);
+         loop cell_idx (instr_idx + 1)
+      | _ ->
+         (* This is a BF comment, just step over it. *)
+         loop cell_idx (instr_idx + 1)
   in
-  loop 0 0;;
+  loop 0 0; cells;;
+
+
+eval_bf ">+ -++<+..";;
+
+eval_bf "+++++ +++++
++++++ +++++
++++++ +++++
++++ 33 is '!' in ASCII
+.. print !!";;
 
 let () = print_endline "hello world"
