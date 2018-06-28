@@ -73,6 +73,12 @@ The C implementation reads programs from standard in.
     $ cd racket
     $ cat ../sample_programs/hello_world.bf | racket brainfrack.rkt
 
+## OCaml
+
+    $ cd ocaml
+    $ ocamlbuild brainfrack.native
+    $ cat ../sample_programs/hello_world.bf| ./brainfrack.native
+
 ## Test programs
 
 http://www.hevanet.com/cristofd/brainfuck/tests.b is a treasure trove
